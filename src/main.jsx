@@ -12,6 +12,8 @@ import Main from './components/layout/Main.jsx'
 import Home from './components/Home/Home.jsx'
 import Error from './components/Error/Error.jsx'
 import Statistics from './components/Statistics/Statistics.jsx'
+import AppliedJobs from './components/AppliedJobs/AppliedJobs.jsx'
+import Blogs from './components/Blogs/Blogs.jsx'
 
 const router = createBrowserRouter([
   {
@@ -28,7 +30,12 @@ const router = createBrowserRouter([
         element: <Statistics />
       },
       {
-        path: ''
+        path: 'applied-jobs',
+        element: <AppliedJobs/>
+      },
+      {
+        path: 'blogs',
+        element: <Blogs/>
       }
     ]
   }

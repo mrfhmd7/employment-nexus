@@ -4,9 +4,9 @@ import { Outlet } from 'react-router-dom';
 
 const Main = () => {
      return (
-          <div>
+          <div className='font-manrope'>
                <Header />
-               <Outlet/>
+               <Outlet />
           </div>
      );
 };
