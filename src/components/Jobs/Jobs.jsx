@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Category from '../Category/Category';
+import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 
 const Jobs = () => {
      const [jobs, setJobs] = useState([]);
@@ -34,6 +35,18 @@ const Jobs = () => {
                                    category_name={category.category_name}
                                    availability={category.availability}
                               ></Category>)
+                         }
+                    </div>
+               </div>
+               <div>
+                    <h2>Featured Jobs</h2>
+                    <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                    <div>
+                         {
+                              jobs.map(job => <FeaturedJobs
+                                   key={job.id}
+                                   
+                              ></FeaturedJobs>)
                          }
                     </div>
                </div>
