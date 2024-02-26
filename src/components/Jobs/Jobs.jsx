@@ -24,9 +24,9 @@ const Jobs = () => {
      return (
           <div>
                <div>
-                    <h2>Jobs Category List</h2>
-                    <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
-                    <div className='flex justify-between'>
+                    <h2 className='font-bold mt-20 text-5xl'>Jobs Category List</h2>
+                    <p className='text-[#757575] mt-6'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+                    <div className='flex justify-between mt-8'>
                          {
                               categories.map(category => <Category
                                    key={category.id}
