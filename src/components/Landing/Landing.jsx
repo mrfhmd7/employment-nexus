@@ -2,7 +2,7 @@ import React from 'react';
 
 const Landing = () => {
      return (
-          <div className='flex'>
+          <div className='flex bg-[#9873FF0D]'>
                <div className=' text-start'>
                     <h2 className='font-extrabold text-6xl flex items-center mt-32 leading-snug'>One Step
                          <br />Closer To Your

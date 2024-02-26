@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
      return (
-          <nav className='flex justify-between'>
+          <nav className="flex justify-between items-center bg-[#9873FF19] h-20 rounded-md bg-[url(/images/bg1.png)] bg-contain bg-no-repeat">
                <Link className='font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to bg-purple-600' to='/'>EmploymentNexus</Link>
                <div className='font-bold text-[#757575] space-x-5 -ml-10'>
                     <Link to='/'>Home</Link>
