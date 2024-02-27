@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Category = ({ logo, category_name, availability }) => {
-     console.log(logo, category_name, availability);
+     // console.log(logo, category_name, availability);
      return (
           <div className='bg-[#4922b30d] w-60 h-48 pl-10 pt-10 rounded-lg text-start'>
                <img className='bg-[#9873FF19] rounded-md' src={logo} alt="" />

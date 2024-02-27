@@ -6,7 +6,7 @@ const Jobs = () => {
      const [jobs, setJobs] = useState([]);
      const [categories, setCategories] = useState([]);
      // console.log(jobs);
-     console.log(categories);
+     // console.log(categories);
 
      useEffect(() => {
           fetch('jobs.json')
@@ -45,7 +45,7 @@ const Jobs = () => {
                          {
                               jobs.map(job => <FeaturedJobs
                                    key={job.id}
-                                   
+                                   logo={job.logo}
                               ></FeaturedJobs>)
                          }
                     </div>
