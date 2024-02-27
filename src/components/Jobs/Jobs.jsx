@@ -5,7 +5,7 @@ import FeaturedJobs from '../FeaturedJobs/FeaturedJobs';
 const Jobs = () => {
      const [jobs, setJobs] = useState([]);
      const [categories, setCategories] = useState([]);
-     console.log(jobs);
+     // console.log(jobs);
      // console.log(categories);
 
      useEffect(() => {
@@ -52,6 +52,7 @@ const Jobs = () => {
                                    job_type={job.job_type}
                                    location={job.location}
                                    salary={job.salary}
+                                   job={job}
                               ></FeaturedJobs>)
                          }
                     </div>

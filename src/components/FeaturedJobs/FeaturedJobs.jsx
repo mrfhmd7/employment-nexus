@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const FeaturedJobs = ({ logo, job_title, company_name, remote_or_onsite, job_type, location, salary }) => {
+const FeaturedJobs = ({ logo, job_title, company_name, remote_or_onsite, job_type, location, salary, job }) => {
      return (
           <div className='rounded-md border border-[#E8E8E8]  shadow-xl text-start'>
                <div className='mt-8 ml-10'>
@@ -22,6 +23,9 @@ const FeaturedJobs = ({ logo, job_title, company_name, remote_or_onsite, job_typ
                          </p>
                     </div>
                </div>
+               <button className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg mt-5 mb-5 ml-10 h-12 w-32 text-white text-lg leading-8'>
+                    <Link to='/job-details'>View Details</Link>
+               </button>
           </div>
      );
 };
