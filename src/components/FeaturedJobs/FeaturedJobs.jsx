@@ -18,7 +18,7 @@ const FeaturedJobs = ({ logo, job_title, company_name, remote_or_onsite, job_typ
                               {location}
                          </p>
                          <p className='flex'>
-                              <img src="/public/icons/money.png" alt="" />
+                              <img src="/icons/money.png" alt="" />
                               {salary}
                          </p>
                     </div>

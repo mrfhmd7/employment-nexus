@@ -8,7 +8,7 @@ const Main = () => {
           <div className='font-manrope'>
                <Header />
                <Outlet />
-               {/* <Footer /> */}
+               <Footer />
           </div>
      );
 };
