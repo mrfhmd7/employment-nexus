@@ -54,7 +54,7 @@ const Footer = () => {
                          </p>
                     </div>
                </div>
-               <hr className='border-2 border-purple-700 mt-4 mb-4' />
+               <hr className='border-2 border-[#9873FF] mt-4 mb-4' />
                <div className='flex justify-between text-white opacity-70 pb-4 ml-4 mr-4'>
                     <p>@2024 CareerHub. All Rights Reserved</p>
                     <p>Powered by Employment Nexus</p>
