@@ -1,7 +1,9 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
-const JobDetails = (children) => {
-     console.log(children);
+const JobDetails = () => {
+     const details = useLoaderData();
+     console.log(details);
      return (
           <div>
                <h2>All jobs are here.</h2>

@@ -23,9 +23,11 @@ const FeaturedJobs = ({ logo, job_title, company_name, remote_or_onsite, job_typ
                          </p>
                     </div>
                </div>
-               <button className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg mt-5 mb-5 ml-10 h-12 w-32 text-white text-lg leading-8'>
-                    <Link to='/job-details'>View Details</Link>
-               </button>
+               <Link to='/details'>
+                    <button className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg mt-5 mb-5 ml-10 h-12 w-32 text-white text-lg leading-8'>
+                         View Details
+                    </button>
+               </Link>
           </div>
      );
 };

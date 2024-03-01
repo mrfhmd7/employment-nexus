@@ -8,7 +8,7 @@ const Error = () => {
                <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
                     <div className="max-w-md w-full text-center">
                          <h2 className="text-4xl font-bold text-gray-800 mb-4">Oops!😢😢</h2>
-                         <p className="text-lg text-gray-600 mb-4">Sorry, an unexpected error has occurred.</p>
+                         <p className="text-xl text-gray-600 mb-4">Sorry, an unexpected error has occurred.</p>
                          <p className="text-xl mt-7 mb-7">
                               <i>{error.statusText || error.message}</i>
                          </p>
