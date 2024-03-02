@@ -1,7 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const FeaturedJobs = ({ logo, job_title, company_name, remote_or_onsite, job_type, location, salary, job }) => {
+     const navigate = useNavigate();
+     const openDetails = (id) => {
+          navigate(`/detail/${id}`);
+     };
+
      return (
           <div className='rounded-md border border-[#E8E8E8]  shadow-xl text-start'>
                <div className='mt-8 ml-10'>
@@ -23,8 +28,10 @@ const FeaturedJobs = ({ logo, job_title, company_name, remote_or_onsite, job_typ
                          </p>
                     </div>
                </div>
-               <Link to='/details'>
-                    <button className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg mt-5 mb-5 ml-10 h-12 w-32 text-white text-lg leading-8'>
+               <Link to={`/details/${job.id}`}>
+                    <button
+                         onClick={() => openDetails(job.id)}
+                         className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg mt-5 mb-5 ml-10 h-12 w-32 text-white text-lg leading-8'>
                          View Details
                     </button>
                </Link>
