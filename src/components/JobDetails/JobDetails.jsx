@@ -12,30 +12,35 @@ const JobDetails = () => {
      console.log(jobDetail);
 
      return (
-          <div className='grid grid-cols-8'>
-               <div >
-                    <p>
-                         <span>Job Description: </span>
-                         {jobDetail.job_description}
-                    </p>
-                    <p>
-                         <span>Job Responsibility: </span>
-                         {jobDetail.job_responsibility}
-                    </p>
-                    <p>
-                         <span>Educational Requirement:</span>
-                         {jobDetail.educational_requirements}
-                    </p>
-                    <p>
-                         <span>Experience</span>
-                         {jobDetail.experiences}
-                    </p>
+          <>
+               <h2 className='text-3xl font-bold mt-14 mb-14'>Job Details</h2>
+               <div className='grid grid-cols-8 gap-6 text-start'>
+                    <div className='col-span-5 text-lg text-[#757575] ml-10'>
+                         <p>
+                              <span className='font-bold text-black'>Job Description: </span>
+                              {jobDetail.job_description}
+                         </p>
+                         <p>
+                              <span className='font-bold text-black'>Job Responsibility: </span>
+                              {jobDetail.job_responsibility}
+                         </p>
+                         <p>
+                              <span className='font-bold text-black'>Educational Requirement:</span>
+                              <br />
+                              {jobDetail.educational_requirements}
+                         </p>
+                         <p>
+                              <span className='font-bold text-black'>Experience</span>
+                              <br />
+                              {jobDetail.experiences}
+                         </p>
+                    </div>
+                    <div>
+                         <h4>Job Details</h4>
+                         <h4>Contact Information</h4>
+                    </div>
                </div>
-               <div>
-                    <h4>Job Details</h4>
-                    <h4>Contact Information</h4>
-               </div>
-          </div>
+          </>
      );
 };
 
