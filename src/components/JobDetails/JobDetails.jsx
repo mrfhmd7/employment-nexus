@@ -40,28 +40,33 @@ const JobDetails = () => {
                               <h4 className='text-[#1A1919] text-lg font-bold mb-5'>Job Details</h4>
                               <hr className='border-[#7E90FE4D] ml-5 mr-10' />
                               <div className='mt-5'>
-                                   <p>
-                                        <span className='text-[#474747] font-bold '>Salary: </span>
-                                        {jobDetail.salary}
+                                   <p className='flex'>
+                                        <img src="/icons/money.png" alt="" />
+                                        <span className='text-[#474747] font-bold pl-1 pr-1'>Salary:</span>
+                                        {jobDetail.salary} (Per Month)
                                    </p>
-                                   <p className='mt-2'>
-                                        <span className='text-[#474747] font-bold'>Job Title: </span>
+                                   <p className='flex mt-2'>
+                                        <img src="/icons/calendar.png" alt="" />
+                                        <span className='text-[#474747] font-bold pl-1 pr-1'>Job Title: </span>
                                         {jobDetail.job_title}
                                    </p>
                               </div>
                               <h4 className='text-[#1A1919] text-lg font-bold mt-6'>Contact Information</h4>
                               <hr className='border-[#7E90FE4D] ml-5 mt-4 mr-10' />
                               <div className='mt-5'>
-                                   <p className='mt-2'>
-                                        <span className='text-[#474747] font-bold'>Phone: </span>
+                                   <p className='mt-2 flex'>
+                                        <img src="/icons/phone.png" alt="" />
+                                        <span className='text-[#474747] font-bold pl-1 pr-1'>Phone: </span>
                                         {jobDetail.contact_information.phone}
                                    </p>
-                                   <p className='mt-2'>
-                                        <span className='text-[#474747] font-bold'>Email: </span>
+                                   <p className='mt-2 flex'>
+                                        <img src="/public/icons/email.png" alt="" />
+                                        <span className='text-[#474747] font-bold pl-1 pr-1'>Email: </span>
                                         {jobDetail.contact_information.email}
                                    </p>
-                                   <p className='mt-2'>
-                                        <span className='text-[#474747] font-bold'>Address: </span>
+                                   <p className='flex mt-2'>
+                                        <img className='h-6' src="/public/icons/Location2.png" alt="" />
+                                        <span className='text-[#474747] font-bold pl-1 pr-1'>Address:</span>
                                         {jobDetail.contact_information.address}
                                    </p>
                               </div>
