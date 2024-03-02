@@ -12,8 +12,8 @@ const JobDetails = () => {
      console.log(jobDetail);
 
      return (
-          <div>
-               <div>
+          <div className='grid grid-cols-8'>
+               <div >
                     <p>
                          <span>Job Description: </span>
                          {jobDetail.job_description}
@@ -32,7 +32,8 @@ const JobDetails = () => {
                     </p>
                </div>
                <div>
-                    
+                    <h4>Job Details</h4>
+                    <h4>Contact Information</h4>
                </div>
           </div>
      );
