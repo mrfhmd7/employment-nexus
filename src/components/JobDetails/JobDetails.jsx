@@ -9,22 +9,22 @@ const JobDetails = () => {
      let params = useParams();
 
      const jobDetail = details.find((job) => job.id == params.detailsId);
-     console.log(jobDetail);
+     // console.log(jobDetail);
 
      return (
           <>
                <h2 className='text-3xl font-bold mt-14 mb-14'>Job Details</h2>
                <div className='grid grid-cols-8 gap-6 text-start'>
                     <div className='col-span-5 text-lg text-[#757575] ml-10'>
-                         <p>
+                         <p className='mb-6'>
                               <span className='font-bold text-black'>Job Description: </span>
                               {jobDetail.job_description}
                          </p>
-                         <p>
+                         <p className='mb-6'>
                               <span className='font-bold text-black'>Job Responsibility: </span>
                               {jobDetail.job_responsibility}
                          </p>
-                         <p>
+                         <p className='mb-6'>
                               <span className='font-bold text-black'>Educational Requirement:</span>
                               <br />
                               {jobDetail.educational_requirements}
@@ -35,9 +35,38 @@ const JobDetails = () => {
                               {jobDetail.experiences}
                          </p>
                     </div>
-                    <div>
-                         <h4>Job Details</h4>
-                         <h4>Contact Information</h4>
+                    <div className=' col-span-3 ml-5 mr-10'>
+                         <div className='bg-[#7E90FE4D] rounded text-[#757575] pl-7 pt-7 pb-4'>
+                              <h4 className='text-[#1A1919] text-lg font-bold mb-5'>Job Details</h4>
+                              <hr className='border-[#7E90FE4D] ml-5 mr-10' />
+                              <div className='mt-5'>
+                                   <p>
+                                        <span className='text-[#474747] font-bold '>Salary: </span>
+                                        {jobDetail.salary}
+                                   </p>
+                                   <p className='mt-2'>
+                                        <span className='text-[#474747] font-bold'>Job Title: </span>
+                                        {jobDetail.job_title}
+                                   </p>
+                              </div>
+                              <h4 className='text-[#1A1919] text-lg font-bold mt-6'>Contact Information</h4>
+                              <hr className='border-[#7E90FE4D] ml-5 mt-4 mr-10' />
+                              <div className='mt-5'>
+                                   <p className='mt-2'>
+                                        <span className='text-[#474747] font-bold'>Phone: </span>
+                                        {jobDetail.contact_information.phone}
+                                   </p>
+                                   <p className='mt-2'>
+                                        <span className='text-[#474747] font-bold'>Email: </span>
+                                        {jobDetail.contact_information.email}
+                                   </p>
+                                   <p className='mt-2'>
+                                        <span className='text-[#474747] font-bold'>Address: </span>
+                                        {jobDetail.contact_information.address}
+                                   </p>
+                              </div>
+                         </div>
+                         <button className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg h-12 w-full text-white font-bold text-lg mt-5'>Apply Now</button>
                     </div>
                </div>
           </>

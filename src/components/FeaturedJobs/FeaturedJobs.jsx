@@ -31,7 +31,7 @@ const FeaturedJobs = ({ logo, job_title, company_name, remote_or_onsite, job_typ
                <Link to={`/details/${job.id}`}>
                     <button
                          onClick={() => openDetails(job.id)}
-                         className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg mt-5 mb-5 ml-10 h-12 w-32 text-white text-lg leading-8'>
+                         className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg mt-5 mb-5 ml-10 h-12 w-32 text-white font-bold'>
                          View Details
                     </button>
                </Link>
