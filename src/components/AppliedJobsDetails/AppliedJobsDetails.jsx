@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const AppliedJobsDetails = ({ job }) => {
-     console.log(job);
+     // console.log(job);
      return (
           <div className='w-3/4 border border-[#E8E8E8] flex justify-between items-center rounded-lg mb-6'>
                <div className='ml-6 bg-[#4922b30d] rounded-lg w-40 h-40 inline-flex items-center'>
