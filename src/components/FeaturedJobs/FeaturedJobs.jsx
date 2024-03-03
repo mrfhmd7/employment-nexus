@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 const FeaturedJobs = ({ logo, job_title, company_name, remote_or_onsite, job_type, location, salary, job }) => {
      const navigate = useNavigate();
      const openDetails = (id) => {
-          navigate(`/detail/${id}`);
+          navigate(`/details/${id}`);
      };
 
      return (
