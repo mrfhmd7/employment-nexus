@@ -8,6 +8,16 @@ const Jobs = () => {
      // console.log(jobs);
      // console.log(categories);
 
+     const [showAll, setShowAll] = useState(false);
+
+     const handleShowAll = () => {
+          setShowAll(true);
+     }
+
+     const handleShowLess = () => {
+          setShowAll(false);
+     }
+
      useEffect(() => {
           fetch('jobs.json')
                .then(res => res.json())
@@ -41,9 +51,9 @@ const Jobs = () => {
                <div>
                     <h2 className='text-5xl font-bold text-[#1A1919] mt-24'>Featured Jobs</h2>
                     <p className='mt-5 mb-6 text-[#757575]'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-                    <div className='grid grid-cols-2 gap-10'>
+                    <div className='grid grid-cols-2 gap-10 mb-7'>
                          {
-                              jobs.map(job => <FeaturedJobs
+                              jobs.slice(0, showAll ? 6 : 4).map(job => <FeaturedJobs
                                    key={job.id}
                                    logo={job.logo}
                                    job_title={job.job_title}
@@ -56,6 +66,26 @@ const Jobs = () => {
                               ></FeaturedJobs>)
                          }
                     </div>
+                    {
+                         !showAll && (
+                              <div>
+                                   <span
+                                        onClick={handleShowAll}>
+                                        <button className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg h-12 w-32 text-white text-lg'>Show All</button>
+                                   </span>
+                              </div>
+                         )
+                    }
+                    {
+                         showAll && (
+                              <div>
+                                   <span
+                                        onClick={handleShowLess}>
+                                        <button className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg h-12 w-32 text-white text-lg'>Show Less</button>
+                                   </span>
+                              </div>
+                         )
+                    }
                </div>
           </div>
      );
