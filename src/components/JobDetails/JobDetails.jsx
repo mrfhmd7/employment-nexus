@@ -1,10 +1,16 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addToDb } from '../FakeDB/FakeDB';
 
 const JobDetails = () => {
 
      const details = useLoaderData();
      // console.log(details);
+
+     const storeInDb = (id) => {
+          console.log(id);
+          addToDb(id);
+     };
 
      let params = useParams();
 
@@ -71,7 +77,11 @@ const JobDetails = () => {
                                    </p>
                               </div>
                          </div>
-                         <button className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg h-12 w-full text-white font-bold text-lg mt-5'>Apply Now</button>
+                         <button
+                              onClick={() => storeInDb(jobDetail.id)}
+                              className='bg-gradient-to-l from-[#7E90FE] to-[#9873FF] rounded-lg h-12 w-full text-white font-bold text-lg mt-5'>
+                              Apply Now
+                         </button>
                     </div>
                </div>
           </>
