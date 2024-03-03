@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { getShoppingCart } from '../FakeDB/FakeDB';
+import AppliedJobsDetails from '../AppliedJobsDetails/AppliedJobsDetails';
 
 const AppliedJobs = () => {
      const jobs = useLoaderData();
@@ -13,11 +14,24 @@ const AppliedJobs = () => {
           let findJobs = jobs.find(job => job.id == id);
           matchedJobs.push(findJobs);
      };
-     console.log(matchedJobs);
+     // console.log(matchedJobs);
 
      return (
           <div>
-               <h3>This is from AppliedJObs..</h3>
+               <div>
+                    <h2>Applied Jobs</h2>
+               </div>
+               <div>
+                    {
+                         matchedJobs.map(job =>
+                              <AppliedJobsDetails
+                                   key={job.id}
+                                   job={job}
+                              >
+                              </AppliedJobsDetails>
+                         )
+                    }
+               </div>
           </div>
      );
 };
