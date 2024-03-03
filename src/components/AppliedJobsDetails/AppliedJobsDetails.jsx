@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const AppliedJobsDetails = ({ job }) => {
      console.log(job);
      return (
-          <div className='w-3/4 border border-[#E8E8E8] flex justify-between items-center rounded-lg mb-10 pb-4'>
+          <div className='w-3/4 border border-[#E8E8E8] flex justify-between items-center rounded-lg mb-6'>
                <div className='ml-6 bg-[#4922b30d] rounded-lg w-40 h-40 inline-flex items-center'>
                     <img className='ml-5' src={job.logo} alt="" />
                </div>
@@ -15,7 +15,7 @@ const AppliedJobsDetails = ({ job }) => {
                          <p className='p-2 border-2 rounded-md border-[#7E90FE] text-transparent bg-clip-text bg-gradient-to-r from-[#7E90FE] to-[#9873FF]'>{job.remote_or_onsite}</p>
                          <p className='p-2 border-2 rounded-md border-[#7E90FE] ml-4 text-transparent bg-clip-text bg-gradient-to-r from-[#7E90FE] to-[#9873FF]'>{job.job_type}</p>
                     </div>
-                    <div className='flex gap-4 mt-5 text-[#757575]'>
+                    <div className='flex gap-4 mt-5 text-[#757575] pb-4'>
                          <p className='flex'>
                               <img src='/icons/Location.png' alt="" />
                               {job.location}

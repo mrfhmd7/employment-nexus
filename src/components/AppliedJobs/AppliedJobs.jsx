@@ -19,7 +19,7 @@ const AppliedJobs = () => {
      return (
           <div>
                <div>
-                    <h2>Applied Jobs</h2>
+                    <h2 className='mt-16 mb-16 text-4xl font-bold'>Applied Jobs</h2>
                </div>
                <div className='flex flex-col items-center'>
                     {
