@@ -65,7 +65,7 @@ const JobDetails = () => {
                                         {jobDetail.contact_information.email}
                                    </p>
                                    <p className='flex mt-2'>
-                                        <img className='h-6' src="/icons/Location2.png" alt="" />
+                                        <img className='h-6' src="/icons/location2.png" alt="" />
                                         <span className='text-[#474747] font-bold pl-1 pr-1'>Address:</span>
                                         {jobDetail.contact_information.address}
                                    </p>
