@@ -21,7 +21,7 @@ const AppliedJobs = () => {
                <div>
                     <h2>Applied Jobs</h2>
                </div>
-               <div>
+               <div className='flex flex-col items-center'>
                     {
                          matchedJobs.map(job =>
                               <AppliedJobsDetails
